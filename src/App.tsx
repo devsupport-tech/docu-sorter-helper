@@ -1,6 +1,7 @@
 
 import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ChatButton } from "@/components/chat";
 import "./App.css";
 
 // Lazy-loaded components
@@ -27,6 +28,9 @@ function App() {
           <Route path="/settings" element={<Settings />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        
+        {/* Global Chat Button */}
+        <ChatButton />
       </Suspense>
     </Router>
   );
